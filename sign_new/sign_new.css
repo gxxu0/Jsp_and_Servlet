@@ -1,0 +1,64 @@
+body{
+    margin: 0 auto;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.header{
+    padding: 15px 0;
+    text-align: center;
+    font-size: 18px;
+    margin-left: 18px;
+    position: relative;
+}
+.header a{
+    color:rgb(0, 0, 0); 
+    text-decoration: none;
+}
+section{
+    top: 110px;
+    position: relative;
+}
+section div{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    font-weight: bold;
+    font-size: 21px;
+}
+#main{
+    top: 110px;
+    position: relative;
+}
+#main div{
+    width: 1500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+}
+#main div label{
+    margin-right: 1.3em;
+    font-weight: 600;
+}
+#main input{
+    height: 21px;
+}
+#check{
+    display: flex;
+    margin-left: 15px;
+}
+#main #comp{
+    width: 17em;
+    height: 3em;
+    font-weight: bold;
+}
+#main p{
+    width: 1500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+}

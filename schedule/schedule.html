@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Schedule</title>
+    <link rel="stylesheet" href="./schedule.css">
+    <script>
+        window.onload = function() {
+     
+            function onClick1() {
+                document.querySelector('.modal_wrap').style.display ='block';
+                document.querySelector('.black_bg').style.display ='block';
+            }   
+            function offClick1() {
+                document.querySelector('.modal_wrap').style.display ='none';
+                document.querySelector('.black_bg').style.display ='none';
+            }
+            function onClick2() {
+                document.querySelector('.modal_wrap2').style.display ='block';
+                document.querySelector('.black_bg2').style.display ='block';
+            }   
+            function offClick2() {
+                document.querySelector('.modal_wrap2').style.display ='none';
+                document.querySelector('.black_bg2').style.display ='none';
+            }
+        
+            document.getElementById('modal_btn1').addEventListener('click', onClick1);
+            document.querySelector('.modal_close').addEventListener('click', offClick1);
+            document.getElementById('modal_btn2').addEventListener('click', onClick2);
+            document.querySelector('.modal_close2').addEventListener('click', offClick2);
+        
+        };
+
+    </script>
+</head>
+<body>
+    <header>
+        <div class="header">
+            <a href="../main/main.jsp">
+                <h1>Your Schedule</h1>
+            </a> 
+        </div>
+    </header>    
+    <div id="modal_btn1">
+        <img src="../img/add.png" alt="add" width="37px">
+    </div>
+
+    <div>
+        <table id="table">
+            <thead>
+                <tr style="background-color: black; color: white; height: 35px;">
+                    <th></th>
+                    <th>월</th>
+                    <th>화</th>
+                    <th>수</th>
+                    <th>목</th>
+                    <th>금</th>
+                </tr>
+            </thead>
+            <tr>
+                <td>1</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <script>
+                
+            </script>
+        </table>
+    </div>
+
+    <div class="black_bg"></div>
+
+    <div class="modal_wrap">
+        <div class="modal_close">
+            <img src="../img/close.png" alt="remove">
+        </div>
+        <form id="form_add" action="add.jsp" accept-charset="utf-8" name="add_modal_time" method="post">
+            <p>새 수업 추가</p>
+            <div class="input_text">
+                과 목 명&nbsp;&nbsp;&nbsp;
+                <input type="text"  size="25"><br>
+            </div>
+            <div>
+                요   일&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="radio" name="day" value="월">월
+                <input type="radio" name="day" value="화">화
+                <input type="radio" name="day" value="수">수
+                <input type="radio" name="day" value="목">목
+                <input type="radio" name="day" value="금">금<br>
+            </div>
+            <div>
+                <label for="time">시작 시간&nbsp;</label>
+                <select name="time" id="time">
+                    <option value="1">오전 9시</option>
+                    <option value="2">오전 10시</option>
+                    <option value="3">오전 11시</option>
+                    <option value="4">오후 12시</option>
+                    <option value="5">오후 1시</option>
+                    <option value="6">오후 2시</option>
+                    <option value="7">오후 3시</option>
+                    <option value="8">오후 4시</option>
+                    <option value="9">오후 5시</option>
+                </select>
+                <label for="continuity">&nbsp;연속 시간</label>
+                <select name="continuity" id="continuity">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select><br>
+            </div>
+            <div>강 의 실&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" size="25"></div>
+            <button style="width: 100%; height: 35px; margin-top: 7px;">입력</button>
+        </form>
+    </div>
+
+
+    <footer> 
+        <div>
+            <img src="../img/yourschedule_logo.png">
+            <p style="font-size: 15px; font-weight: 500;">Your Schedule</p>
+            <p style="font-size: 12px; font-weight: 400;">phone : +82)1-234-5678&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;팩스번호 : +82)1-234-5678</p>
+            <p style="font-size: 15px; font-weight: 500;">Copyright © Your Schedule All right reserved</p>
+        </div>
+    </footer>
+</body>
+</html>

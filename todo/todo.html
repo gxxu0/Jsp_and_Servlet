@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<%@ page contentType="text/html;charset=UTF-8"%>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./todo.css">
+    <script>
+        window.onload = function() {
+     
+        function onClick1() {
+            document.querySelector('.modal_wrap').style.display ='block';
+            document.querySelector('.black_bg').style.display ='block';
+        }   
+        function offClick1() {
+            document.querySelector('.modal_wrap').style.display ='none';
+            document.querySelector('.black_bg').style.display ='none';
+        }
+    
+        document.getElementById('modal_btn1').addEventListener('click', onClick1);
+        document.querySelector('.modal_close').addEventListener('click', offClick1);
+ 
+ };
+    </script>
+</head>
+<body>
+    <!--<script>
+        const rowCnt = 1;
+        const columnCnt = 2;
+
+        document.write('<table border="1">');
+        for (let i = 0; i < rowCnt; i++) {
+            document.write('<tr>');
+            for (let j = 0; j < columnCnt; j++)  {
+                document.write('<td>');
+                document.write(i);
+                document.write('</td>');
+            }
+        document.write('</tr>')
+        }
+        document.write('</table>');
+    </script>-->
+
+    <header>
+        <div class="header">
+            <a href="../main/main.jsp">
+                <h1>Your Schedule</h1>
+            </a> 
+        </div>
+    </header>
+    <main id="main">
+           
+        <div class="black_bg"></div>
+        <div class="modal_wrap">
+            <div class="modal_close">
+                <img src="./../img/close.png" alt="remove">
+            </div>
+            <form id="form_add" action="#" accept-charset="utf-8" name="add_modal_time" method="get">
+                <p style="font-size: 18px;">할 일 추가</p>
+                <div>
+                    <input type="text" placeholder=" 제목을 입력하세요!" style="width: 100%; height: 20px;"><br>
+                    <textarea name="text" placeholder=" 내용을 입력하세요!" id="text_content" rows="5"></textarea>
+                </div>
+                <div id="period1">
+                    <div style="position: relative; float: left; margin-top: 10px; font-weight: bold;">
+                        기한 설정
+                    </div>
+                    <div class="wrapper" id="wrapper_open">
+                        <input type="checkbox" id="switch" onclick="openCloseToc()">
+                        <label for="switch" class="switch_label">
+                            <span class="onoff"></span>
+                        </label>
+                    </div>
+                </div>
+                <script>
+                    function openCloseToc(){
+                        if(document.getElementById('period').style.display === 'block'){
+                            document.getElementById('period').style.display = 'none';
+                        }
+                        else{
+                            document.getElementById('period').style.display = 'block';
+                        }
+                    }
+                </script>
+                <div id="period" style="display: none;">
+                    <input type="date" class="date_select2">
+                </div>
+
+                <div id="period2">
+                    <div style="position: absolute; bottom: 25%; float:left; font-weight: bold;">
+                        반복 설정
+                    </div>
+                    <div class="wrapper2" id="wrapper_open2">
+                        <input type="checkbox" id="switch2" onclick="openCloseToc2()">
+                        <label for="switch2" class="switch_label2">
+                            <span class="onoff2"></span>
+                        </label>
+                    </div>
+                </div>
+                <script>
+                    function openCloseToc2(){
+                        if(document.getElementById('period_select2').style.display === 'block'){
+                            document.getElementById('period_select2').style.display = 'none';
+                        }
+                        else{
+                            document.getElementById('period_select2').style.display = 'block';
+                        }
+                    }
+                </script>
+
+                <div id="period_select2" style="display: none;">
+                    <div class="period_select_radio">
+                        <input type="checkbox" id="mon" value="mon" name="period"><label for="mon">월</label>
+                        <input type="checkbox" id="tue" value="tue" name="period"><label for="tue">화</label>
+                        <input type="checkbox" id="wed" value="wed" name="period"><label for="wed">수</label>
+                        <input type="checkbox" id="thu" value="thu" name="period"><label for="thu">목</label>
+                        <input type="checkbox" id="fri" value="fri" name="period"><label for="fri">금</label>
+                        <input type="checkbox" id="sat" value="sat" name="period"><label for="sat">토</label>
+                        <input type="checkbox" id="sun" value="sun" name="period"><label for="sun">일</label>
+                    </div>
+                    
+                </div>
+                <button id="button_input" style="width: 100%; height: 35px;">입력</button>
+            </form>
+        </div>
+        <div id="container-box">
+            
+            <div class="container-left">
+                <form action="#" id="form_add" accept-charset="utf-8" name="add_modal_time" method="get">
+                    <div id="modal_btn1">
+                        <img src="../img/menu.png" alt="add" width="25px">
+                    </div>
+                </form>
+                <div class="container_input">
+                    <h3 style="text-align: center;">할 일 목록</h3>
+                    <ul id="list">
+                        <li class="list-item">your schedule</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="container-right">
+                <div class="container_input">
+                    <h3 style="text-align: center;">할 일 목록</h3>
+                    <ul id="list">
+                        <li class="list-item">your schedule</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+    </main>
+    <footer> 
+        <div>
+            <img src="../img/yourschedule_logo.png">
+            <p style="font-size: 15px; font-weight: 500;">Your Schedule</p>
+            <p style="font-size: 12px; font-weight: 400;">phone : +82)1-234-5678&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;팩스번호 : +82)1-234-5678</p>
+            <p style="font-size: 15px; font-weight: 500;">Copyright © Your Schedule All right reserved</p>
+        </div>
+    </footer>
+</body>
+</html>

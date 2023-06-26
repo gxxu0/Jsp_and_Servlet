@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header">
+            <a href="../main/main.jsp">
+                <h1>Your Schedule</h1>
+            </a> 
+        </div>
+    </header>
+    <section>
+        <div>로그인</div>
+    </section>
+    <main id="main">
+        <form action="login.jsp" method="POST">
+            <div>
+                <label for="id" id="id">ID</label>
+                <input type="text" class="input" name="uid" required>
+            </div>
+            <div>
+                <label for="pw">PW</label>
+                <input type="password" class="input" name="upw" required>
+            </div>
+            <div>
+                <button type="submit">LOG IN</button>
+            </div>
+        </form>
+        <p class="sign">
+                <a href="../login/popup.html">아직 회원이 아니신가요?</a>
+            </p>
+    </main>
+</body>
+</html>

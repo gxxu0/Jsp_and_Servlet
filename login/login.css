@@ -1,0 +1,63 @@
+body{
+    margin: 0 auto;
+}
+*{
+    font-family: 'Nanum Gothic', sans-serif;
+}
+.header{
+    padding: 15px 0;
+    text-align: center;
+    font-size: 18px;
+    margin-left: 18px;
+    position: relative;
+}
+.header a{
+    color:rgb(0, 0, 0); 
+    text-decoration: none;
+}
+section{
+    top: 110px;
+    position: relative;
+}
+section div{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    font-weight: bold;
+    font-size: 21px;
+}
+#main{
+    top: 110px;
+    position: relative;
+}
+#main div{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+}
+#main div label{
+    margin-right: 1.3em;
+    font-weight: 600;
+}
+#main #id{
+    margin-right: 1.9em;
+}
+#main input{
+    height: 21px;
+}
+#main button{
+    width: 17em;
+    height: 3em;
+    font-weight: bold;
+}
+#main p{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+}

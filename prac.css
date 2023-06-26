@@ -1,0 +1,67 @@
+* {
+    box-sizing: border-box;
+}
+*:before, *:after {
+    box-sizing: border-box;
+}
+.page {
+    text-align: center;
+    padding: 20px 0;
+}
+.page section:after {
+    content: attr(title);
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 15px;
+    color: #fff;
+    font-size: 12px;
+}
+  /* 체크박스 컨테이닝 박스 공통 스타일 정의 */
+.page section > div {
+    margin: 25px auto;
+    position: relative;
+}
+.page section input[type="checkbox"] {
+    visibility: hidden;
+}
+.roundedTwo {
+    width: 15px;
+    height: 15px;
+    background: #fcfff4;
+    background: -webkit-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+    background: linear-gradient(to bottom, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+    border-radius: 50px;
+    box-shadow: inset 0 1px 1px #fff, 0 1px 3px rgba(0, 0, 0, 0.7);
+  }
+  .roundedTwo label {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    cursor: pointer;
+    background: -webkit-linear-gradient(top, #222222 0%, #45484d 100%);
+    background: linear-gradient(to bottom, #222222 0%, #45484d 100%);
+    border-radius: 50px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.5), 0 2px 0 #fff;
+  }
+  .roundedTwo label:after {
+    content: "";
+    width: 12px;
+    height: 8px;
+    position: absolute;
+    top: 5px;
+    left: 4px;
+    border: solid #f7fbed;
+    border-width:0 0 3px 3px;
+    opacity: 0;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+  .roundedTwo label:hover::after {
+    opacity: 0.3;
+  }
+  .roundedTwo input[type=checkbox]:checked + label:after {
+    opacity: 1;
+  }

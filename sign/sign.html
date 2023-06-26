@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./sign.css">
+</head>
+<body>
+    <header>
+        <div class="header">
+            <a href="../main/main.jsp">
+                <h1>Your Schedule</h1>
+            </a> 
+        </div>
+    </header>
+
+    <section>
+        <div>회원가입</div>
+    </section>
+    <main id="main">
+        <form action="sign.jsp" method="POST">
+            <div style="margin-right: 30px;">
+                <label for="usernic">닉네임</label>
+                <input type="text" class="input" name="uname" required>
+            </div>
+            <div>
+                <label for="userid">ID</label>
+                <input type="text" class="input" name="uid" required>
+            </div>
+            <div style="margin-right: 10px;">
+                <label for="userpw">PW</label>
+                <input type="password" class="input" name="upw" required>
+            </div>
+            <div>
+                <button id="comp" type="submit">완료</button>
+            </div>
+        </form>
+    </main>
+</body>
+</html>
